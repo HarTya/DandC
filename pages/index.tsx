@@ -6,7 +6,7 @@ import styles from 'styles/Home.module.scss'
 const Home: NextPageWithLayout = () => {
   return (
     <div className={styles.home}>
-      <video autoPlay muted loop playsInline className={styles.home_video}>
+      <video autoPlay muted loop playsInline preload='metadata' className={styles.home_video}>
         <source src='video/video-bg.mp4' type='video/mp4' />
       </video>
     </div>
