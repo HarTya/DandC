@@ -11,28 +11,4 @@
         height: 100vh;
         object-fit: cover;
     }
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: $second-color;
-        animation: Bg 18s ease-in-out infinite;
-        @keyframes Bg {
-            0%, 5% {
-                opacity: 1;
-            }
-            5%, 95% {
-                opacity: 0.1;
-            }
-            95%, 100% {
-                opacity: 1;
-            }
-        }
-    }
 }
