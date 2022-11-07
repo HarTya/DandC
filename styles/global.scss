@@ -6,6 +6,30 @@
     box-sizing: border-box;
 }
 
+*::-webkit-media-controls-panel {
+
+    display: none!important;
+
+    appearance: none;
+
+}
+
+*::--webkit-media-controls-play-button {
+
+    display: none!important;
+
+    appearance: none;
+
+}
+
+*::-webkit-media-controls-start-playback-button {
+
+    display: none!important;
+
+    appearance: none;
+
+}
+
 body {
     margin: 0;
 }
