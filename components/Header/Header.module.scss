@@ -1,0 +1,12 @@
+@import 'styles/variables';
+
+.header {
+    width: 100vw;
+    height: 94px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+    background-color: $header-bg-color;
+}

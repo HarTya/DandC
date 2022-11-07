@@ -1,15 +1,16 @@
 import { useEffect } from 'react'
+import styles from './Header.module.scss';
 
 export default function Header() {
 
     useEffect(() => {
-        console.log('Header mount')
+        console.log('Header mounted')
         return () => (
-            console.log('Header unmount')
+            console.log('Header unmounted')
         )
     }, [])
 
     return (
-        <header>Header</header>
+        <header className={styles.header}>Header</header>
     )
 }

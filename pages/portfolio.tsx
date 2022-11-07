@@ -1,12 +1,11 @@
 import type { ReactElement } from 'react'
 import Layout from 'components/Layout'
 import type { NextPageWithLayout } from 'pages/_app'
-import Link from 'next/link'
 
 const Portfolio: NextPageWithLayout = () => {
   return (
     <div>
-        <Link href={'/'}>Homepage</Link>
+        <div>Portfolio</div>
     </div>
   )
 }

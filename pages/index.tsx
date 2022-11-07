@@ -1,19 +1,19 @@
 import type { ReactElement } from 'react'
 import Layout from 'components/Layout'
 import type { NextPageWithLayout } from 'pages/_app'
-import styles from 'styles/Homepage.module.scss'
-import Link from 'next/link'
+import styles from 'styles/Home.module.scss'
 
-const Homepage: NextPageWithLayout = () => {
+const Home: NextPageWithLayout = () => {
   return (
-    <div className={styles.homepage}>
-      <p>Бог дизайна Эндрю пиктурес и бог кода хартя собрались здесь чтобы сотворить шедевр веб исскуства</p>
-      <Link href={'/portfolio'}>Portfolio Page</Link>
+    <div className={styles.home}>
+      <video autoPlay muted loop className={styles.home_video}>
+        <source src='video/video-bg.mp4' type='video/mp4' />
+      </video>
     </div>
   )
 }
 
-Homepage.getLayout = (page: ReactElement) => {
+Home.getLayout = (page: ReactElement) => {
   return (
     <Layout
       meta={{
@@ -26,4 +26,4 @@ Homepage.getLayout = (page: ReactElement) => {
   )
 }
 
-export default Homepage
+export default Home
