@@ -12,9 +12,34 @@
         width: 100vw;
         height: 100vh;
         object-fit: cover;
+        animation: Video 1s ease-in-out forwards;
+        @keyframes Video {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     }
     &_image {
         display: none!important;
+    }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.33;
     }
 }
 
@@ -25,8 +50,18 @@
         }
         &_image {
             display: block!important;
-            z-index: -1;
             object-fit: cover;
+            animation: Img 5s ease-in-out forwards;
+            @keyframes Img {
+                0%, 80% {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
         }
     }
 }
