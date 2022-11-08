@@ -1,0 +1,83 @@
+@import 'styles/variables';
+@import 'public/fonts';
+
+.logo {
+    position: absolute;
+    z-index: 101;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
+    p {
+        position: relative;
+        bottom: -2px;
+        font-size: 30px;
+        font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
+    }
+    animation: Logo 3s ease-in-out forwards;
+    @keyframes Logo {
+        0% {
+            border: 10px solid $second-color;
+            background-color: transparent;
+
+            width: 250px;
+
+            top: 50vh;
+            left: 50vw;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        25% {
+            border: 10px solid $second-color;
+            background-color: $second-color;
+            
+            width: 250px;
+
+            top: 50vh;
+            left: 50vw;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        50% {
+            border: 16px solid $second-color;
+            background-color: $second-color;
+
+            width: 100vw;
+
+            top: 50vh;
+            left: 50vw;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        75% {
+            border: 16px solid $second-color;
+            background-color: $second-color;
+
+            width: 100vw;
+
+            top: 0px;
+            left: 50vw;
+            transform: translateX(-50%);
+        }
+        99% {
+            border: 16px solid transparent;
+            background-color: transparent;
+
+            width: 100vw;
+
+            top: 0px;
+            left: 50vw;
+            transform: translateX(-50%);
+        }
+        100% {
+            border: 10px solid transparent;
+            background-color: transparent;
+
+            width: 250px;
+
+            top: 6px;
+            left: 50vw;
+            transform: translateX(-50%);
+        }
+    }
+}
