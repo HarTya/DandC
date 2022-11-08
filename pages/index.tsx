@@ -6,7 +6,7 @@ import styles from 'styles/Home.module.scss'
 const Home: NextPageWithLayout = () => {
   return (
     <div className={styles.home}>
-      <video autoPlay muted loop playsInline preload='metadata' className={styles.home_video}>
+      <video autoPlay muted loop playsInline preload='metadata' poster='https://res.cloudinary.com/dandcready/video/upload/q_100/v1667904954/dandcreadywebsite/fj7x0cqmojwe8jfvnr3l.jpg' className={styles.home_video}>
         <source src='https://res.cloudinary.com/dandcready/video/upload/q_100/v1667904954/dandcreadywebsite/fj7x0cqmojwe8jfvnr3l.mp4' type='video/mp4' />
       </video>
     </div>
