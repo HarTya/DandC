@@ -1,3 +1,5 @@
+@import 'styles/variables';
+
 *,
 *::after,
 *::before {
@@ -6,30 +8,7 @@
     box-sizing: border-box;
 }
 
-*::-webkit-media-controls-panel {
-
-    display: none!important;
-
-    -webkit-appearance: none;
-
-}
-
-*::--webkit-media-controls-play-button {
-
-    display: none!important;
-
-    -webkit-appearance: none;
-
-}
-
-*::-webkit-media-controls-start-playback-button {
-
-    display: none!important;
-
-    -webkit-appearance: none;
-
-}
-
 body {
     margin: 0;
+    background-color: $third-color;
 }
