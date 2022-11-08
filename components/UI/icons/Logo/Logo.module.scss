@@ -3,81 +3,57 @@
 
 .logo {
     position: absolute;
-    z-index: 101;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
-    p {
-        position: relative;
-        bottom: -2px;
-        font-size: 30px;
-        font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
-    }
+    z-index: -1;
+    height: 94px;
     animation: Logo 3s ease-in-out forwards;
     @keyframes Logo {
-        0% {
-            border: 10px solid $second-color;
-            background-color: transparent;
-
-            width: 250px;
-
+        0%, 30% {
             top: 50vh;
             left: 50vw;
             transform: translateY(-50%) translateX(-50%);
+            width: 300px;
         }
-        25% {
-            border: 10px solid $second-color;
-            background-color: $second-color;
-            
-            width: 250px;
-
+        45%, 70% {
             top: 50vh;
             left: 50vw;
             transform: translateY(-50%) translateX(-50%);
+            width: 100%;
         }
-        50% {
-            border: 16px solid $second-color;
-            background-color: $second-color;
-
-            width: 100vw;
-
-            top: 50vh;
-            left: 50vw;
-            transform: translateY(-50%) translateX(-50%);
-        }
-        75% {
-            border: 16px solid $second-color;
-            background-color: $second-color;
-
-            width: 100vw;
-
-            top: 0px;
+        85%, 100% {
+            top: 0;
             left: 50vw;
             transform: translateX(-50%);
+            width: 100%;
         }
-        99% {
-            border: 16px solid transparent;
-            background-color: transparent;
-
-            width: 100vw;
-
-            top: 0px;
-            left: 50vw;
-            transform: translateX(-50%);
+    }
+    &_text {
+        margin: 0 auto;
+        width: 300px;
+        height: 100%;
+        border: 10px solid transparent;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
+        p {
+            position: relative;
+            bottom: -2px;
+            font-size: 30px;
+            font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
         }
-        100% {
-            border: 10px solid transparent;
-            background-color: transparent;
-
-            width: 250px;
-
-            top: 6px;
-            left: 50vw;
-            transform: translateX(-50%);
+        animation: LogoText 4s ease-in-out forwards;
+        @keyframes LogoText {
+            0%, 25% {
+                width: 100%;
+                border: 10px solid $second-color;
+            }
+            25%, 80% {
+                width: 100%;
+                background-color: $second-color;
+            }
         }
     }
 }

@@ -2,6 +2,8 @@ import styles from './Logo.module.scss'
 
 export default function Logo() {
     return (
-        <div className={styles.logo}>D<p>&</p>C Ready</div>
+        <div className={styles.logo}>
+            <span className={styles.logo_text}>D<p>&</p>C Ready</span>
+        </div>
     )
 }
