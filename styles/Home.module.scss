@@ -3,42 +3,4 @@
 .home {
     position: relative;
     min-height: 100vh;
-    &_video {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        animation: Video 1s ease-in-out forwards;
-        @keyframes Video {
-            0%, 50% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    }
-    &_image {
-        display: none!important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .home {
-        &_video {
-            display: none;
-        }
-        &_image {
-            display: block!important;
-            object-fit: cover;
-        }
-    }
 }

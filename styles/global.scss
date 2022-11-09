@@ -19,33 +19,19 @@ body {
     main {
         position: relative;
         z-index: 1;
-        animation: Main 4s linear forwards;
+        animation: Main 4s ease-in-out forwards;
         @keyframes Main {
             0%, 75% {
                 opacity: 0;
-                transform: scale(0);
+                transform: translateY(-94px);
             }
             100% {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
         }
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            width: 100vw;
-            height: 100vh;
-            background-color: black;
-            opacity: 0.33;
-        }
         #page-content {
-            padding-top: 94px;
+            padding: 124px 30px 30px 30px;
         }
     }
 }
