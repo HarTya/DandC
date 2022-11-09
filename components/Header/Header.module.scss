@@ -20,6 +20,7 @@
         cursor: pointer;
         font-size: 30px;
         font-weight: 500;
+        opacity: 0.7;
         animation: Link 4s ease-in-out forwards;
         @keyframes Link {
             0%, 75% {
@@ -27,9 +28,11 @@
                 pointer-events: none;
             }
             100% {
-                opacity: 1;
                 pointer-events: all;
             }
+        }
+        &_active {
+            opacity: 1;
         }
     }
     animation: Header 4s ease-in-out forwards;

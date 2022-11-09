@@ -10,6 +10,7 @@
     font-family: 'Roboto Mono', sans-serif;
     letter-spacing: 1px;
     font-weight: 400;
+    text-decoration: none;
 }
 
 body {
@@ -28,6 +29,23 @@ body {
                 opacity: 1;
                 transform: scale(1);
             }
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            opacity: 0.33;
+        }
+        #page-content {
+            padding-top: 94px;
         }
     }
 }

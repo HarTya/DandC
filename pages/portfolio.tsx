@@ -4,8 +4,8 @@ import type { NextPageWithLayout } from 'pages/_app'
 
 const Portfolio: NextPageWithLayout = () => {
   return (
-    <div>
-        <div>Portfolio</div>
+    <div id='page-content'>
+      Portfolio
     </div>
   )
 }
