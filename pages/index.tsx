@@ -26,8 +26,11 @@ const Home: NextPageWithLayout = () => {
         alt='background'
         src='https://res.cloudinary.com/dandcready/video/upload/q_100/v1667904954/dandcreadywebsite/fj7x0cqmojwe8jfvnr3l.jpg'
         layout='fill'
+        width={3840}
+        height={2160}
         quality={100}
         className={styles.home_image}
+        priority
       />
     </div>
   )
