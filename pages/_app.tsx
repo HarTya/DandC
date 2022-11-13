@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
+import { ReactElement, ReactNode, useEffect } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import 'styles/global.scss'
@@ -14,6 +14,14 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function App({ Component, ...rest }: AppPropsWithLayout) {
+
+  useEffect(() => {
+    const Debounce = setTimeout(() => {
+      document.body.className = 'scroll'
+    }, 3000)
+
+    return () => clearTimeout(Debounce)
+  }, [])
   
   const { store, props } = wrapper.useWrappedStore(rest)
   const getLayout = Component.getLayout ?? ((page) => page)

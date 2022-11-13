@@ -3,6 +3,7 @@
 *,
 *::after,
 *::before {
+    cursor: default;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,9 +14,34 @@
     text-decoration: none;
 }
 
+*::selection {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $first-color-opacity;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $first-color;
+}
+
 body {
     margin: 0;
     background-color: $third-color;
+    overflow: hidden;
+    &.scroll {
+        overflow-y: auto!important;
+    }
     main {
         position: relative;
         z-index: 1;
@@ -31,7 +57,7 @@ body {
             }
         }
         #page-content {
-            padding: 124px 30px 30px 30px;
+            padding: 124px 30px 0 30px;
         }
     }
 }
