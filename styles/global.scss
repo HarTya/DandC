@@ -45,15 +45,15 @@ body {
     main {
         position: relative;
         z-index: 1;
-        animation: Main 4s ease-in-out forwards;
-        @keyframes Main {
+        top: 0;
+        animation: PageContent 4s ease-in-out forwards;
+        @keyframes PageContent {
             0%, 75% {
                 opacity: 0;
-                transform: translateY(-94px);
+                top: -5vw;
             }
             100% {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
         #page-content {

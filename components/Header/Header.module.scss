@@ -2,7 +2,8 @@
 
 .header {
     width: 100vw;
-    height: 94px;
+    height: 5vw;
+    min-height: 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,15 +11,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 125px;
+    padding: 0 6vw;
     &_links {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         :not(:last-child) {
-            margin-right: 50px;
+            margin-right: 2em;
         }
     }
     &_link {
         cursor: pointer;
-        font-size: 30px;
+        font-size: 1.6vw;
         font-weight: 500;
         opacity: 0.7;
         animation: Link 4s ease-in-out forwards;
