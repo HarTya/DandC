@@ -10,9 +10,12 @@ const Home: NextPageWithLayout = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      document.body.style.setProperty('--scroll', `${window.scrollY / (document.body.offsetHeight - window.innerHeight)}`)
+      document.body.style.setProperty('--scroll-first', `${window.scrollY / 500}`)
+      document.body.style.setProperty('--scroll-second', `${window.scrollY / 1000}`)
     }, false)
   }, [])
+
+  const backgroundBlocks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
 
   return (
     <div className={styles.home}>
@@ -43,6 +46,26 @@ const Home: NextPageWithLayout = () => {
             <div className={styles.home_teamMember_arrow_title}>Дивитись<br />портфоліо</div>
             <RightArrow size={'8vw'} />
           </div>
+        </div>
+        <div className={`${styles.home_teamMember} ${styles.home_teamMember_reverse}`}>
+          <div className={styles.home_teamMember_arrow}>
+            <LeftArrow size={'8vw'} />
+            <div className={`${styles.home_teamMember_arrow_title} ${styles.home_teamMember_reverse_arrow_title}`}>Дивитись<br />портфоліо</div>
+          </div>
+          <div className={styles.home_teamMember_content}>
+            <div className={styles.home_teamMember_content_role}>Full-Stack Розробник</div>
+            <div className={styles.home_teamMember_content_name}>Артемій</div>
+            <div className={styles.home_teamMember_content_about}>Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що с цього моменту вони напрямують свої сили на боротьбу з злими силами поганих сайтів</div>
+          </div>
+          <div className={styles.home_teamMember_image}></div>
+        </div>
+        <div className={styles.home_portfolioScreen}>
+          <div className={styles.home_portfolioScreen_background}>
+            {backgroundBlocks.map(id => <div key={id} id={`${id}`}></div>)}
+          </div>
+          <div className={styles.home_portfolioScreen_title}>Портфоліо</div>
+          <div className={styles.home_portfolioScreen_subtitle}>Сумістні роботи</div>
+          <div className={styles.home_portfolioScreen_text}>Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що с цього моменту вони напрямують свої сили на боротьбу з злими силами поганих сайтів</div>
         </div>
       </div>
     </div>

@@ -38,7 +38,8 @@
 body {
     margin: 0;
     background-color: $third-color;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     &.scroll {
         overflow-y: auto!important;
     }
