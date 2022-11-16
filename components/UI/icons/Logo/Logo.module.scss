@@ -30,7 +30,7 @@
     }
     &_text {
         margin: 0 auto;
-        width: 14vw;
+        width: 10em;
         height: 100%;
         border: 10px solid transparent;
         background-color: transparent;
@@ -38,12 +38,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.8vw;
+        font-size: 2vw;
         font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
         p {
             position: relative;
-            bottom: -2px;
-            font-size: 1.6vw;
+            bottom: -0.15vw;
+            font-size: 1.7vw;
             font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
         }
         animation: LogoText 4s ease-in-out forwards;

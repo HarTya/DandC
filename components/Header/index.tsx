@@ -8,13 +8,6 @@ export default function Header() {
 
     const router = useRouter()
 
-    useEffect(() => {
-        console.log('Header mounted')
-        return () => (
-            console.log('Header unmounted')
-        )
-    }, [])
-
     return (
         <header className={styles.header}>
             <div className={styles.header_links}>
