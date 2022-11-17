@@ -36,13 +36,6 @@ export default function Background() {
                     />
                 </video> 
             : <></>}
-            <Image
-                alt='background'
-                src='https://res.cloudinary.com/dandcready/video/upload/q_100/v1667904954/dandcreadywebsite/fj7x0cqmojwe8jfvnr3l.jpg'
-                layout='fill'
-                quality={100}
-                className={styles.image}
-            />
         </>
     )
 }

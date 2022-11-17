@@ -36,18 +36,3 @@
         }
     }
 }
-
-.image {
-    display: none!important;
-}
-
-@media screen and (max-width: 768px) {
-    .video {
-        display: none;
-    }
-    .image {
-        display: block!important;
-        z-index: -1;
-        object-fit: cover;
-    }
-}

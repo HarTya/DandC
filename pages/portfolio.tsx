@@ -15,7 +15,7 @@ Portfolio.getLayout = (page: ReactElement) => {
     <Layout
       meta={{
         title: 'D&C Ready Portfolio',
-        description: 'D&C Ready Portfolio'
+        description: 'D&C Ready Portfolio Page'
       }}
     >
       {page}

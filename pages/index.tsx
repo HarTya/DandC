@@ -10,8 +10,8 @@ const Home: NextPageWithLayout = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      document.body.style.setProperty('--scroll-first', `${window.scrollY / 500}`)
-      document.body.style.setProperty('--scroll-second', `${window.scrollY / 1000}`)
+      document.body.style.setProperty('--scroll-toFirstMember', `${window.scrollY / (window.innerHeight / 2)}`)
+      document.body.style.setProperty('--scroll-toSecondMember', `${window.scrollY / window.innerHeight}`)
     }, false)
   }, [])
 
@@ -77,7 +77,7 @@ Home.getLayout = (page: ReactElement) => {
     <Layout
       meta={{
         title: 'D&C Ready!',
-        description: 'D&C Ready'
+        description: 'D&C Ready Main Page'
       }}
     >
       {page}
