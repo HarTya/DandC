@@ -1,3 +1,3 @@
-### D&C Ready
+# D&C Ready
 
-## All rights reserved.
+All rights reserved.
