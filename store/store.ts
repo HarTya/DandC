@@ -6,8 +6,7 @@ const makeStore = () =>
     configureStore({
         reducer: {
             [videoSlice.name]: videoSlice.reducer
-        },
-        devTools: true
+        }
     })
 
 export type AppStore = ReturnType<typeof makeStore>

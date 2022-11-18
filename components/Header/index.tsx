@@ -1,7 +1,6 @@
 import Logo from 'components/UI/icons/Logo'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import styles from './Header.module.scss'
 
 export default function Header() {

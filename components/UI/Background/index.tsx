@@ -1,12 +1,11 @@
 import styles from './Background.module.scss'
-import Image from 'next/legacy/image'
 import { useAppDispatch, useAppSelector } from 'store/hook'
 import { selectVideoState, setVideoState } from 'store/videoSlice'
 import { useEffect } from 'react'
 
 export default function Background() {
 
-    const videoState = useAppSelector(selectVideoState);
+    const videoState = useAppSelector(selectVideoState)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
