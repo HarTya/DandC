@@ -10,7 +10,7 @@ export default function Background() {
 
     useEffect(() => {
         const Debounce = setTimeout(() => {
-          dispatch(setVideoState(true))
+            dispatch(setVideoState(true))
         }, 4000)
 
         return () => clearTimeout(Debounce)

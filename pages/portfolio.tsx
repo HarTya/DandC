@@ -3,24 +3,24 @@ import Layout from 'components/Layout'
 import type { NextPageWithLayout } from 'pages/_app'
 
 const Portfolio: NextPageWithLayout = () => {
-  return (
-    <div id='page-content'>
-      Portfolio
-    </div>
-  )
+    return (
+        <div id='page-content'>
+            Portfolio
+        </div>
+    )
 }
 
 Portfolio.getLayout = (page: ReactElement) => {
-  return (
-    <Layout
-      meta={{
-        title: 'D&C Ready Portfolio',
-        description: 'D&C Ready Portfolio Page'
-      }}
-    >
-      {page}
-    </Layout>
-  )
+    return (
+        <Layout
+            meta={{
+                title: 'D&C Ready Portfolio',
+                description: 'D&C Ready Portfolio Page'
+            }}
+        >
+            {page}
+        </Layout>
+    )
 }
 
 export default Portfolio
