@@ -26,11 +26,10 @@ export default function Background() {
                     loop 
                     playsInline 
                     preload='metadata' 
-                    poster='https://res.cloudinary.com/dandcready/video/upload/q_100/v1667904954/dandcreadywebsite/fj7x0cqmojwe8jfvnr3l.jpg' 
                     className={styles.video}
                 >
                     <source 
-                        src='https://res.cloudinary.com/dandcready/video/upload/q_100/v1667904954/dandcreadywebsite/fj7x0cqmojwe8jfvnr3l.mp4' 
+                        src='https://res.cloudinary.com/dcready/video/upload/q_100/v1668954492/main-background-video.mp4' 
                         type='video/mp4' 
                     />
                 </video> 
