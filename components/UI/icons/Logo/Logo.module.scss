@@ -2,12 +2,16 @@
 @import 'public/fonts';
 
 .logo {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: Logo 4s ease-in-out forwards;
+    animation: Logo 3s ease-in-out forwards;
     @keyframes Logo {
         0%, 75% {
             height: 100vh;
@@ -17,8 +21,6 @@
         }
     }
     &_content {
-        position: fixed;
-        z-index: 101;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -28,30 +30,30 @@
         font-size: 2vw;
         font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
         p {
-            position: relative;
             cursor: pointer;
+            position: relative;
             bottom: -0.1em;
             font-size: 1.7vw;
             font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
         }
         animation: LogoContent 4s ease-in-out forwards;
         @keyframes LogoContent {
-            0%, 25% {
+            0%, 20% {
                 border: 0.4em solid $second-color;
                 width: 15vw;
                 height: 5vw;
             }
-            40%, 50% {
+            30%, 40% {
                 border: 0.4em solid $second-color;
                 background-color: $second-color;
                 width: 15vw;
                 height: 5vw;
             }
-            65%, 75% {
+            50%, 80% {
                 border: 0.4em solid $second-color;
                 background-color: $second-color;
                 width: 100%;
-                height: 6vw;
+                height: 5vw;
             }
             100% {
                 width: 15vw;

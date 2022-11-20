@@ -24,6 +24,7 @@
     &_link {
         height: 100%;
         position: relative;
+        z-index: 101;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -13,8 +13,6 @@ export default function Layout({ children, meta }: LayoutProps) {
                 <title>{title}</title>
                 <meta name='description' content={description} />
                 <link rel='icon' href={icon || '/favicon.ico'} />
-                <link rel='preconnect' href='https://fonts.googleapis.com' />
-                <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
             </Head>
             <>
                 <Header />

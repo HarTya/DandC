@@ -14,33 +14,31 @@ export default function Header() {
     }, [])
 
     return (
-        <>
-            <Logo />
-            <header className={styles.header}>
-                <div className={styles.header_links}>
-                    <Link 
-                        href={'/'} 
-                        className={
-                            router.asPath === '/' ? 
-                            `${styles.header_link} ${styles.header_link_active}` 
-                            : styles.header_link
-                        }
-                    >
-                        Про Нас
-                    </Link>
-                    <Link 
-                        href={'/portfolio'} 
-                        className={
-                            router.asPath === '/portfolio' ? 
-                            `${styles.header_link} ${styles.header_link_active}` 
-                            : styles.header_link
-                        }
-                    >
-                        Портфоліо
-                    </Link>
-                </div>
-                <span className={styles.header_link}>Зворотній зв’язок</span>
-            </header>
-        </>
+        <header className={styles.header}>
+            <div className={styles.header_links}>
+                <Link 
+                    href={'/'} 
+                    className={
+                        router.asPath === '/' ? 
+                        `${styles.header_link} ${styles.header_link_active}` 
+                        : styles.header_link
+                    }
+                >
+                    Про Нас
+                </Link>
+                <Link 
+                    href={'/portfolio'} 
+                    className={
+                        router.asPath === '/portfolio' ? 
+                        `${styles.header_link} ${styles.header_link_active}` 
+                        : styles.header_link
+                    }
+                >
+                    Портфоліо
+                </Link>
+                <Logo />
+            </div>
+            <span className={styles.header_link}>Зворотній зв’язок</span>
+        </header>
     )
 }
