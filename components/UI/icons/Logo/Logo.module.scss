@@ -8,6 +8,7 @@
     right: 0;
     bottom: 0;
     width: 100vw;
+    min-height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +22,7 @@
         }
     }
     &_content {
+        min-height: 55px;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -57,7 +59,7 @@
             }
             100% {
                 width: 15vw;
-                height: 5vw;
+                height: 100%;
             }
         }
     }
