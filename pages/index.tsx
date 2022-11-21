@@ -11,7 +11,7 @@ const Home: NextPageWithLayout = () => {
     useEffect(() => {
         window.addEventListener('scroll', () => {
             document.body.style.setProperty('--scroll-toFirstMember', `${window.scrollY / (window.innerHeight / 2)}`)
-            document.body.style.setProperty('--scroll-toSecondMember', `${window.scrollY / window.innerHeight}`)
+            document.body.style.setProperty('--scroll-toSecondMember', `${window.scrollY / window.innerHeight / 0.9}`)
         }, false)
     }, [])
 
