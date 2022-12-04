@@ -10,7 +10,6 @@ import variables from 'styles/variables.module.scss'
 import Lines from 'components/UI/icons/Lines'
 import { useAppSelector } from 'store/hook'
 import { selectToolsState } from 'store/toolsSlice'
-import REIBIKE from 'public/images/reibike.png'
 
 const Home: NextPageWithLayout = () => {
 
@@ -58,8 +57,8 @@ const Home: NextPageWithLayout = () => {
                         <Card
                             title={'Що вміє наша\nкоманда?'}
                             text={
-                                toolsState.map(({ name, Icon }) =>
-                                    <span>
+                                toolsState.map(({ id, name, Icon }) =>
+                                    <span key={id}>
                                         <Icon />
                                         <p>{name}</p>
                                     </span>
@@ -89,8 +88,8 @@ const Home: NextPageWithLayout = () => {
                         title={'REIBIKE\nBest for bravest'}
                         text={'Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що с цього моменту вони напрямують свої сили на боротьбу з злими силами поганих сайтів'}
                         color={variables.secondColor}
-                        imageSrc={REIBIKE}
                         wideBorder
+                        imageSrc
                     />
                 </div>
                 <div className={styles.home_portfolioScreen}>
