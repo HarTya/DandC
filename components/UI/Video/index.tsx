@@ -1,9 +1,9 @@
-import styles from './Background.module.scss'
+import styles from './Video.module.scss'
 import { useAppDispatch, useAppSelector } from 'store/hook'
 import { selectVideoState, setVideoState } from 'store/videoSlice'
 import { useEffect } from 'react'
 
-export default function Background() {
+export default function Video() {
 
     const videoState = useAppSelector(selectVideoState)
     const dispatch = useAppDispatch()

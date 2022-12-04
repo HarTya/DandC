@@ -1,4 +1,4 @@
-@import 'styles/variables';
+@import 'styles/variables.module';
 
 *,
 *::after,
@@ -32,11 +32,8 @@ body {
             background-color: transparent;
         }
         &-thumb {
-            background: $first-color-opacity;
+            background: $first-color;
             border-radius: 15px;
-            &:hover {
-                background: $first-color;
-            }
         }
     }
     main {

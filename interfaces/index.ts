@@ -8,3 +8,13 @@ export interface LayoutProps {
         icon?: string
     }
 }
+
+export interface CardProps {
+    caption?: string,
+    title: string,
+    text: string | Array<any>,
+    color: string,
+    bigSize?: boolean,
+    wideBorder?: boolean,
+    imageSrc?: any
+}

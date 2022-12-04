@@ -1,0 +1,16 @@
+$first-color: #F3DED5;
+$second-color: #202042;
+$third-color: #101024;
+$fourth-color: #090F40;
+$fifth-color: #342842;
+$sixth-color: #2F1159;
+$header-bg-color: rgba($second-color, 0.6);
+$first-color-opacity: rgba($first-color, 0.1);
+
+:export {
+    secondColor: $second-color;
+    thirdColor: $third-color;
+    fourthColor: $fourth-color;
+    fifthColor: $fifth-color;
+    sixthColor: $sixth-color;
+}

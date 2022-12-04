@@ -1,4 +1,4 @@
-@import 'styles/variables';
+@import 'styles/variables.module';
 @import 'public/fonts';
 
 .logo {
@@ -23,7 +23,6 @@
     }
     &_content {
         min-height: 55px;
-        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,11 +31,14 @@
         font-size: 2vw;
         font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
         p {
-            cursor: pointer;
             position: relative;
-            bottom: -0.1em;
-            font-size: 1.7vw;
+            left: 0;
+            bottom: -0.05em;
+            font-size: 1.8vw;
             font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
+            background: linear-gradient(180deg, #1ABCFE 47%, #FED32F 53%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         animation: LogoContent 4s ease-in-out forwards;
         @keyframes LogoContent {
