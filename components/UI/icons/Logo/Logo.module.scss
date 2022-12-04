@@ -22,45 +22,21 @@
         }
     }
     &_content {
-        min-height: 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 0.4em solid transparent;
-        background-color: transparent;
-        font-size: 2vw;
-        font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
-        p {
-            position: relative;
-            left: 0;
-            bottom: -0.05em;
-            font-size: 1.8vw;
-            font-family: 'SofiaProSoft-Bold', Fallback, sans-serif;
-            background: linear-gradient(180deg, #1ABCFE 47%, #FED32F 53%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         animation: LogoContent 4s ease-in-out forwards;
         @keyframes LogoContent {
             0%, 20% {
                 border: 0.4em solid $second-color;
-                width: 15vw;
-                height: 5vw;
             }
             30%, 40% {
                 border: 0.4em solid $second-color;
                 background-color: $second-color;
-                width: 15vw;
-                height: 5vw;
             }
             50%, 80% {
                 border: 0.4em solid $second-color;
                 background-color: $second-color;
                 width: 100%;
-                height: 5vw;
             }
             100% {
-                width: 15vw;
                 height: 100%;
             }
         }

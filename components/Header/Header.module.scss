@@ -47,28 +47,25 @@
         &::after {
             content: '';
             position: absolute;
-            top: 100%;
+            top: 80%;
             left: 50%;
-            transform: translate(-50%) scale(1);
+            transform: translate(-50%);
             opacity: 0;
             width: 0;
-            height: 0.1em;
+            height: 0.25em;
             background-color: $first-color;
-            border-radius: 0 0 25px 25px;
-            transition: all 0.4s ease-in-out;
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out;
         }
         &:hover {
             &::after {
                 opacity: 1;
-                width: 50%;
+                width: 0.25em;
             }
         }
         &_active {
             cursor: default;
             opacity: 1;
-            &::after {
-                transform: translate(-50%) scale(0);
-            }
         }
     }
     animation: Header 4s ease-in-out forwards;

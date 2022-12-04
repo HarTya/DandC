@@ -19,7 +19,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
             &_title {
                 font-weight: 700;
                 font-size: 2vw;
@@ -69,10 +69,10 @@
                 display: grid;
                 grid-template-columns: repeat(5, 0fr);
                 gap: 50px;
-                img {
-                    width: 7vw;
-                    height: 7vw;
-                    object-fit: cover;
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }
@@ -87,7 +87,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: $fourth-color;
+        background-color: $second-color;
         &_background {
             position: absolute;
             z-index: -1;
@@ -95,7 +95,7 @@
             bottom: 30px;
             width: 100%;
             height: calc(100% - 60px);
-            background-color: $fourth-color;
+            background-color: $second-color;
             overflow: hidden;
             display: grid;
             grid-template-columns: repeat(7, 0fr);
@@ -106,9 +106,10 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
-                animation: BackgroundBlocks 5s linear infinite;
+                animation: BackgroundBlocks 4s linear infinite;
+                opacity: 0.5;
                 @keyframes BackgroundBlocks {
                     0% {
                         transform: translateX(0);
@@ -127,7 +128,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(7)::after {
@@ -139,7 +140,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(8)::after {
@@ -151,7 +152,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(14)::after {
@@ -163,7 +164,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(15)::after {
@@ -175,7 +176,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(21)::after {
@@ -187,7 +188,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(22)::after {
@@ -199,7 +200,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(28)::after {
@@ -211,7 +212,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :nth-child(29)::before {
@@ -223,7 +224,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
             :last-child::after {
@@ -235,7 +236,7 @@
                 height: 108px;
                 border: 2px solid $first-color-opacity;
                 border-radius: 10px;
-                background: url('https://cdn.shazoo.ru/392046_hbSSQnuvLZ_haker_s_sinim_noutbukom_5_360x27.jpg') no-repeat;
+                background: url('https://scontent.fpsr1-1.fna.fbcdn.net/v/t1.18169-9/247958_10150203778082029_4084846_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=S3F7Zu8gM-EAX9_astw&_nc_ht=scontent.fpsr1-1.fna&oh=00_AfBu3Yca_-AkYwBbHYHUyJ3s9UTEVdIOq9SfMoS-5ER2LA&oe=63B43D37') no-repeat;
                 background-size: cover;
             }
         }
