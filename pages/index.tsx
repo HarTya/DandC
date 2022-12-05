@@ -9,6 +9,7 @@ import Card from 'components/UI/Card'
 import variables from 'styles/variables.module.scss'
 import Lines from 'components/UI/icons/Lines'
 import { toolsWeUse, whatWeUseIcons } from 'utils'
+import Link from 'next/link'
 
 const Home: NextPageWithLayout = () => {
 
@@ -39,16 +40,19 @@ const Home: NextPageWithLayout = () => {
                             title={'Що для нас\nважливо?'}
                             text={'Для нас найважливіше це клієнти, ми прикладаємо всі можливі сили для того, щоб задовольнити запити та вибудувати довгострокові відносини.'}
                             color={variables.fifthColor}
+                            height={'23vw'}
                         />
                         <Card
                             title={`Яка наша\nмета?`}
                             text={'Наша мета полягає в тому, щоб доставляти нашим клієнтам якісний продукт вчасно, ми завжди ретельно ставимося до кожного проекту.'}
                             color={variables.secondColor}
+                            height={'23vw'}
                         />
                         <Card
                             title={'Яка наша\nкоманда?'}
                             text={'Наші співробітники є професіоналами своєї справи, ми завжди сприяємо розвитку наших співробітників та заохочуємо їх за це.'}
                             color={variables.fourthColor}
+                            height={'23vw'}
                         />
                     </div>
                     <div className={styles.home_info_row}>
@@ -68,10 +72,10 @@ const Home: NextPageWithLayout = () => {
                         <div className={styles.home_info_whatWeUse}>
                             <div className={styles.home_info_whatWeUse_text}>Що ми<br />використовуємо:</div>
                             <div className={styles.home_info_whatWeUse_icons}>
-                                {whatWeUseIcons.map(({ id, Icon }) =>
-                                    <span key={id}>
+                                {whatWeUseIcons.map(({ id, url, Icon }) =>
+                                    <Link href={url} target={'_blank'} key={id}>
                                         <Icon />
-                                    </span>
+                                    </Link>
                                 )}
                             </div>
                         </div>
@@ -82,7 +86,6 @@ const Home: NextPageWithLayout = () => {
                         text={'Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що с цього моменту вони напрямують свої сили на боротьбу з злими силами поганих сайтів'}
                         color={variables.secondColor}
                         wideBorder
-                        imageSrc
                     />
                 </div>
                 <div className={styles.home_portfolioScreen}>

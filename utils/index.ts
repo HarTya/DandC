@@ -5,7 +5,7 @@ import BackEnd from 'components/UI/icons/BackEnd'
 import Jira from 'components/UI/icons/Jira'
 import NodeJS from 'components/UI/icons/NodeJS'
 import GitHub from 'components/UI/icons/GitHub'
-import PhpStorm from 'components/UI/icons/PhpStorm'
+import WebStorm from 'components/UI/icons/WebStorm'
 import Figma from 'components/UI/icons/Figma'
 import Sketch from 'components/UI/icons/Sketch'
 import TypeScript from 'components/UI/icons/TypeScript'
@@ -21,14 +21,14 @@ export const toolsWeUse = [
 ]
 
 export const whatWeUseIcons = [
-    { id: 1, Icon: Jira },
-    { id: 2, Icon: NodeJS },
-    { id: 3, Icon: GitHub },
-    { id: 4, Icon: PhpStorm },
-    { id: 5, Icon: Figma },
-    { id: 6, Icon: Sketch },
-    { id: 7, Icon: TypeScript },
-    { id: 8, Icon: React },
-    { id: 9, Icon: Illustrator },
-    { id: 10, Icon: Photoshop }
+    { id: 1, url: 'https://www.atlassian.com/software/jira', Icon: Jira },
+    { id: 2, url: 'https://nodejs.org/en/', Icon: NodeJS },
+    { id: 3, url: 'https://github.com/', Icon: GitHub },
+    { id: 4, url: 'https://www.jetbrains.com/webstorm/', Icon: WebStorm },
+    { id: 5, url: 'https://www.figma.com/', Icon: Figma },
+    { id: 6, url: 'https://www.sketch.com/', Icon: Sketch },
+    { id: 7, url: 'https://www.typescriptlang.org/', Icon: TypeScript },
+    { id: 8, url: 'https://reactjs.org/', Icon: React },
+    { id: 9, url: 'https://www.adobe.com/products/illustrator.html', Icon: Illustrator },
+    { id: 10, url: 'https://www.adobe.com/products/photoshop.html', Icon: Photoshop }
 ]

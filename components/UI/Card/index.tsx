@@ -1,13 +1,14 @@
 import { CardProps } from 'interfaces'
 import styles from './Card.module.scss'
 
-export default function Card({ caption, title, text, color, bigSize = false, wideBorder = false, imageSrc }: CardProps) {
+export default function Card({ caption, title, text, color, bigSize = false, wideBorder = false, height = false }: CardProps) {
     return (
         <div className={styles.card} id='card'>
             <style jsx>{`
                 #card {
                     background: ${color};
                     padding: ${bigSize ? '4vw 3vw' : '3vw 1.5vw'};
+                    ${height ? `height: ${height}` : ''};
                 }
                 #card:after {
                     top: ${wideBorder ? '1.2em' : '1em'};
@@ -16,7 +17,7 @@ export default function Card({ caption, title, text, color, bigSize = false, wid
                     border-bottom: ${wideBorder ? '0.5em' : '0.4em'} solid ${color};
                 }
                 #content {
-                    width: ${imageSrc ? '42%' : '100%'};
+                    width: 100%;
                 }
                 #text {
                     font-size: ${bigSize ? '1.9vw' : '1.5vw'};

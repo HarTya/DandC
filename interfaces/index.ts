@@ -12,9 +12,9 @@ export interface LayoutProps {
 export interface CardProps {
     caption?: string,
     title: string,
-    text: string | Array<any>,
+    text: string | Array<ReactElement>,
     color: string,
     bigSize?: boolean,
     wideBorder?: boolean,
-    imageSrc?: any
+    height?: string | boolean
 }

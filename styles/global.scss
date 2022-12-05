@@ -32,8 +32,11 @@ body {
             background-color: transparent;
         }
         &-thumb {
-            background: $first-color;
+            background: $first-color-opacity;
             border-radius: 15px;
+            &:hover {
+                background: $first-color;
+            }
         }
     }
     main {

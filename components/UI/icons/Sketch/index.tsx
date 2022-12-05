@@ -1,6 +1,6 @@
 export default function Sketch() {
     return (
-        <svg width='7vw' height='5vw' viewBox='0 0 195 120' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <svg width='8vw' height='5vw' viewBox='0 0 195 120' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path fillRule='evenodd' clipRule='evenodd' d='M95.625 77.0312L58.125 32.5H74.5312L95.625 70L116.719 32.5H133.125L95.625 77.0312Z' fill='#EA6B00'/>
             <path fillRule='evenodd' clipRule='evenodd' d='M115.938 32.5L116.719 9.84375L133.125 32.5H115.938ZM74.5312 9.84375L75.3125 32.5H58.125L74.5312 9.84375Z' fill='#FDAD02'/>
             <path fillRule='evenodd' clipRule='evenodd' d='M95.6247 33.2812H73.7498L74.531 26.25L95.6247 7.5L116.718 26.25L117.5 33.2812H95.6247Z' fill='#FEEFB8'/>
