@@ -5,7 +5,7 @@
     min-height: 100vh;
     &_previewScreen {
         width: 100%;
-        height: calc(100vh - (5vw + 30px));
+        height: calc(100vh - 7vw);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -74,7 +74,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    & * {cursor: pointer}
+                    &, & * {cursor: pointer}
                     svg {
                         position: relative;
                         top: 0;
@@ -91,10 +91,10 @@
     }
     &_portfolioScreen {
         position: relative;
-        left: -30px;
+        left: -2vw;
         z-index: 1;
         width: 100vw;
-        height: 840px;
+        height: calc(100vh - 5vw);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -103,130 +103,60 @@
         &_background {
             position: absolute;
             z-index: -1;
-            top: 30px;
-            bottom: 30px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1vw 0;
             width: 100%;
-            height: calc(100% - 60px);
-            background-color: $second-color;
+            height: 100%;
             overflow: hidden;
             display: grid;
             grid-template-columns: repeat(7, 0fr);
-            gap: 60px;
+            gap: 2.5vw; 
             div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &_block {
                 position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
+                height: 10vh;
+                border: 0.15vw solid $first-color-opacity;
+                border-radius: 0.5vw;
                 animation: BackgroundBlocks 4s linear infinite;
                 @keyframes BackgroundBlocks {
                     0% {
                         transform: translateX(0);
                     }
                     100% {
-                        transform: translateX(calc(100% + 60px));
+                        transform: translateX(calc(100% + 2.5vw));
                     }
                 }
-            }
-            :first-child::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                right: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(7)::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                left: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(8)::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                right: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(14)::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                left: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(15)::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                right: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(21)::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                left: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(22)::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                right: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(28)::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                left: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :nth-child(29)::before {
-                content: '';
-                position: absolute;
-                top: -2px;
-                right: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
-            }
-            :last-child::after {
-                content: '';
-                position: absolute;
-                top: -2px;
-                left: calc(100% + 62px);
-                width: 10vw;
-                height: 108px;
-                border: 2px solid $first-color-opacity;
-                border-radius: 10px;
+                &[id='1']::after, &[id='8']::after, &[id='15']::after, &[id='22']::after, &[id='29']::after {
+                    content: '';
+                    position: absolute;
+                    top: -0.1vw;
+                    right: calc(10vw + 2.4vw);
+                    width: 10vw;
+                    height: 10vh;
+                    border: 0.15vw solid $first-color-opacity;
+                    border-radius: 0.5vw;
+                }
+                &[id='7']::after, &[id='14']::after, &[id='21']::after, &[id='28']::after, &[id='35']::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: calc(10vw + 2.35vw);
+                    width: 10vw;
+                    height: 10vh;
+                    border: 0.15vw solid $first-color-opacity;
+                    border-radius: 0.5vw;
+                }
             }
         }
         &_title {

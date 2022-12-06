@@ -11,10 +11,10 @@ export default function Card({ caption, title, text, color, bigSize = false, wid
                     ${height ? `height: ${height}` : ''};
                 }
                 #card:after {
-                    top: ${wideBorder ? '1.2em' : '1em'};
-                    left: ${wideBorder ? '1.2em' : '1em'};
-                    border-right: ${wideBorder ? '0.5em' : '0.4em'} solid ${color};
-                    border-bottom: ${wideBorder ? '0.5em' : '0.4em'} solid ${color};
+                    top: ${wideBorder ? '1.2vw' : '1vw'};
+                    left: ${wideBorder ? '1.2vw' : '1vw'};
+                    border-right: ${wideBorder ? '0.5vw' : '0.4vw'} solid ${color};
+                    border-bottom: ${wideBorder ? '0.5vw' : '0.4vw'} solid ${color};
                 }
                 #content {
                     width: 100%;

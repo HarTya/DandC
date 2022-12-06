@@ -1,12 +1,11 @@
 .card {
     flex: 1 1 auto;
     padding: 3em 1.5em;
-    margin: 20px;
+    margin: 1vw;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     position: relative;
-    border-radius: 5px 0 0 0;
     &::after {
         content: '';
         position: absolute;

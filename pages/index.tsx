@@ -8,13 +8,10 @@ import RightArrow from 'components/UI/icons/RightArrow'
 import Card from 'components/UI/Card'
 import variables from 'styles/variables.module.scss'
 import Lines from 'components/UI/icons/Lines'
-import { toolsWeUse, whatWeUseIcons } from 'utils'
+import { portfolioBackgroundBlocks, toolsWeUse, whatWeUseIcons } from 'utils'
 import Link from 'next/link'
 
 const Home: NextPageWithLayout = () => {
-
-    const backgroundBlocks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
-
     return (
         <div className={styles.home}>
             <Video />
@@ -90,7 +87,11 @@ const Home: NextPageWithLayout = () => {
                 </div>
                 <div className={styles.home_portfolioScreen}>
                     <div className={styles.home_portfolioScreen_background}>
-                        {backgroundBlocks.map(id => <div key={id} id={`${id}`}></div>)}
+                        {portfolioBackgroundBlocks.map(id =>
+                            <div key={id}>
+                                <span id={`${id}`} className={styles.home_portfolioScreen_background_block}></span>
+                            </div>
+                        )}
                     </div>
                     <div className={styles.home_portfolioScreen_title}>Портфоліо</div>
                     <div className={styles.home_portfolioScreen_subtitle}>Сумістні роботи</div>

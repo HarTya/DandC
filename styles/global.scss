@@ -27,13 +27,13 @@ body {
         overflow-y: auto!important;
     }
     &::-webkit-scrollbar {
-        width: 10px;
+        width: 0.5vw;
         &-track {
             background-color: transparent;
         }
         &-thumb {
-            background: $first-color-opacity;
-            border-radius: 15px;
+            background: $scroll-color;
+            border-radius: 0.5vw;
             &:hover {
                 background: $first-color;
             }
@@ -54,7 +54,7 @@ body {
             }
         }
         #page-content {
-            padding: calc(5vw + 30px) 30px 0 30px;
+            padding: 7vw 2vw 0 2vw;
             overflow: hidden;
         }
     }
