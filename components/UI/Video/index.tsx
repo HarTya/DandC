@@ -8,11 +8,11 @@ export default function Video() {
             loop 
             playsInline 
             preload='metadata' 
-            poster='https://res.cloudinary.com/dcready/video/upload/q_100/v1670364158/rlss73attpxj5qnquai4.jpg'
+            poster=''
             className={styles.video}
         >
             <source 
-                src='https://res.cloudinary.com/dcready/video/upload/q_100/v1670364158/rlss73attpxj5qnquai4.mp4' 
+                src='https://res.cloudinary.com/demo/video/upload/leul3z9pz6rykz4lu6lo.mp4' 
                 type='video/mp4' 
             />
         </video> 
