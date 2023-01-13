@@ -12,7 +12,7 @@ export default function Video() {
             className={styles.video}
         >
             <source 
-                src='https://res.cloudinary.com/demo/video/upload/leul3z9pz6rykz4lu6lo.mp4' 
+                src='https://res.cloudinary.com/dcready/video/upload/v1668954492/dcready/main-background-video.mp4' 
                 type='video/mp4' 
             />
         </video> 

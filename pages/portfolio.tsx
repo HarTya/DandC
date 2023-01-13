@@ -5,7 +5,7 @@ import type { NextPageWithLayout } from 'pages/_app'
 const Portfolio: NextPageWithLayout = () => {
     return (
         <div id='page-content'>
-            <p style={{fontSize: '1.5vw'}}>Иди нахуй</p>
+            <p style={{fontSize: '1.5vw'}}>Портфоліо</p>
         </div>
     )
 }

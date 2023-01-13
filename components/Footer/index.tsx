@@ -1,13 +1,10 @@
-import { useEffect } from 'react'
+import styles from './Footer.module.scss'
 
 export default function Footer() {
 
-    useEffect(() => {
-        console.log('Footer mounted...')
-        return () => console.log('Footer unmounted...')
-    }, [])
-
     return (
-        <footer></footer>
+        <footer className={styles.footer}>
+            Footer
+        </footer>
     )
 }
