@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
-import { LayoutProps } from 'interfaces'
+import { LayoutProps } from 'types'
 
 export default function Layout({ children, meta }: LayoutProps) {
 

@@ -1,4 +1,4 @@
-import { CardProps } from 'interfaces'
+import { CardProps } from 'types'
 import styles from './Card.module.scss'
 
 export default function Card({ caption, title, text, color, bigSize = false, wideBorder = false, height = false }: CardProps) {

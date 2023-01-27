@@ -1,11 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import { createWrapper } from 'next-redux-wrapper'
-import { videoSlice } from './videoSlice'
 
 const makeStore = () =>
     configureStore({
         reducer: {
-            [videoSlice.name]: videoSlice.reducer
+            
         }
     })
 

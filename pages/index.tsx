@@ -7,7 +7,6 @@ import LeftArrow from 'components/UI/icons/LeftArrow'
 import RightArrow from 'components/UI/icons/RightArrow'
 import Card from 'components/UI/Card'
 import variables from 'styles/variables.module.scss'
-import Lines from 'components/UI/icons/Lines'
 import { portfolioBackgroundBlocks, toolsWeUse, whatWeUseIcons } from 'utils'
 import Link from 'next/link'
 
@@ -31,7 +30,7 @@ const Home: NextPageWithLayout = () => {
                     </div>
                 </div>
                 <div className={styles.home_info}>
-                    <Lines />
+                    <div className={styles.home_info_background} />
                     <div className={styles.home_info_row}>
                         <Card
                             title={'Що для нас\nважливо?'}
@@ -89,7 +88,7 @@ const Home: NextPageWithLayout = () => {
                     <div className={styles.home_portfolioScreen_background}>
                         {portfolioBackgroundBlocks.map(id =>
                             <div key={id}>
-                                <span id={`${id}`} className={styles.home_portfolioScreen_background_block}></span>
+                                <span id={`${id}`} className={styles.home_portfolioScreen_background_block} />
                             </div>
                         )}
                     </div>
