@@ -2,20 +2,20 @@ import type { ReactElement } from 'react'
 import Layout from 'components/Layout'
 import type { NextPageWithLayout } from 'pages/_app'
 
-const Portfolio: NextPageWithLayout = () => {
+const Feedback: NextPageWithLayout = () => {
     return (
         <div id='page-content'>
-            <p style={{fontSize: '1vw'}}>Портфоліо</p>
+            <p style={{fontSize: '1vw'}}>Зворотній зв’язок</p>
         </div>
     )
 }
 
-Portfolio.getLayout = (page: ReactElement) => {
+Feedback.getLayout = (page: ReactElement) => {
     return (
         <Layout
             meta={{
-                title: 'D&C Ready Portfolio',
-                description: 'D&C Ready Portfolio Page'
+                title: 'D&C Ready Feedback',
+                description: 'D&C Ready Feedback Page'
             }}
         >
             {page}
@@ -23,4 +23,4 @@ Portfolio.getLayout = (page: ReactElement) => {
     )
 }
 
-export default Portfolio
+export default Feedback

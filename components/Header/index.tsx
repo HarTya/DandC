@@ -10,29 +10,38 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.header_links}>
-                <Link 
-                    href={'/'} 
+                <Link
+                    href={'/'}
                     className={
-                        router.asPath === '/' ? 
-                        `${styles.header_link} ${styles.header_link_active}` 
-                        : styles.header_link
+                        router.asPath === '/' ?
+                            `${styles.header_link} ${styles.header_link_active}`
+                            : styles.header_link
                     }
                 >
                     Про Нас
                 </Link>
-                <Link 
-                    href={'/portfolio'} 
+                <Link
+                    href={'/portfolio'}
                     className={
-                        router.asPath === '/portfolio' ? 
-                        `${styles.header_link} ${styles.header_link_active}` 
-                        : styles.header_link
+                        router.asPath === '/portfolio' ?
+                            `${styles.header_link} ${styles.header_link_active}`
+                            : styles.header_link
                     }
                 >
                     Портфоліо
                 </Link>
             </div>
             <Logo />
-            <span className={styles.header_link}>Зворотній зв’язок</span>
+            <Link
+                href={'/feedback'}
+                className={
+                    router.asPath === '/feedback' ?
+                        `${styles.header_link} ${styles.header_link_active}`
+                        : styles.header_link
+                }
+            >
+                Зворотній зв’язок
+            </Link>
         </header>
     )
 }
