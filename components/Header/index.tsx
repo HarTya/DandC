@@ -30,8 +30,8 @@ export default function Header() {
                 >
                     Портфоліо
                 </Link>
-                <Logo />
             </div>
+            <Logo />
             <span className={styles.header_link}>Зворотній зв’язок</span>
         </header>
     )
