@@ -55,7 +55,7 @@
             height: 0.25em;
             background-color: $first-color;
             border-radius: 50%;
-            transition: all 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
         }
         &:hover {
             &::after {

@@ -31,7 +31,7 @@ export default function Header() {
                     Портфоліо
                 </Link>
             </div>
-            <Logo />
+            <Logo animation />
             <Link
                 href={'/feedback'}
                 className={
