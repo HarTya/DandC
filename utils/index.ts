@@ -13,6 +13,10 @@ import React from 'components/UI/icons/React'
 import Illustrator from 'components/UI/icons/Illustrator'
 import Photoshop from 'components/UI/icons/Photoshop'
 
+export const HOME_PAGE = '/'
+export const PORTFOLIO_PAGE = '/portfolio'
+export const FEEDBACK_PAGE = '/feedback'
+
 export const toolsWeUse = [
     { id: 1, name: 'UI/UX Design', Icon: Monitor },
     { id: 2, name: 'Graphic Design', Icon: Pen },

@@ -10,7 +10,7 @@
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        &_arrow {
+        &_link {
             &, & * {cursor: pointer}
             width: 33.33333%;
             flex: 1 1 auto;
@@ -24,8 +24,19 @@
                 font-weight: 700;
                 font-size: 2vw;
             }
+            &_arrow {
+                position: relative;
+                left: 0;
+                transition: left 0.2s ease-in-out;
+            }
             &:hover {
                 opacity: 1;
+                & *[id='preview-screen-left-arrow'] {
+                    left: -0.5vw;
+                }
+                & *[id='preview-screen-right-arrow'] {
+                    left: 0.5vw;
+                }
             }
         }
         &_content {
@@ -102,7 +113,7 @@
         left: -2vw;
         z-index: 1;
         width: 100vw;
-        height: calc(100vh - 5vw);
+        height: 40vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -110,7 +121,7 @@
         background-color: $second-color;
         &_background {
             position: absolute;
-            z-index: -1;
+            z-index: 1;
             top: 0;
             left: 0;
             right: 0;
@@ -133,9 +144,10 @@
                 justify-content: center;
                 align-items: center;
                 width: 10vw;
-                height: 10vh;
+                height: 5vw;
                 border: 0.15vw solid $first-color-opacity;
                 border-radius: 0.5vw;
+                transition: background-color 0.2s ease-in-out;
                 animation: BackgroundBlocks 4s linear infinite;
                 @keyframes BackgroundBlocks {
                     0% {
@@ -151,7 +163,7 @@
                     top: -0.1vw;
                     right: calc(10vw + 2.4vw);
                     width: 10vw;
-                    height: 10vh;
+                    height: 5vw;
                     border: 0.15vw solid $first-color-opacity;
                     border-radius: 0.5vw;
                 }
@@ -161,9 +173,12 @@
                     top: -0.1vw;
                     left: calc(10vw + 2.4vw);
                     width: 10vw;
-                    height: 10vh;
+                    height: 5vw;
                     border: 0.15vw solid $first-color-opacity;
                     border-radius: 0.5vw;
+                }
+                &:hover {
+                    background-color: $first-color-opacity;
                 }
             }
         }

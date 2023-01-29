@@ -1,6 +1,7 @@
 import Logo from 'components/UI/icons/Logo'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { FEEDBACK_PAGE, HOME_PAGE, PORTFOLIO_PAGE } from 'utils'
 import styles from './Header.module.scss'
 
 export default function Header() {
@@ -11,9 +12,9 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.header_links}>
                 <Link
-                    href={'/'}
+                    href={HOME_PAGE}
                     className={
-                        router.asPath === '/' ?
+                        router.asPath === HOME_PAGE ?
                             `${styles.header_link} ${styles.header_link_active}`
                             : styles.header_link
                     }
@@ -21,9 +22,9 @@ export default function Header() {
                     Про Нас
                 </Link>
                 <Link
-                    href={'/portfolio'}
+                    href={PORTFOLIO_PAGE}
                     className={
-                        router.asPath === '/portfolio' ?
+                        router.asPath === PORTFOLIO_PAGE ?
                             `${styles.header_link} ${styles.header_link_active}`
                             : styles.header_link
                     }
@@ -33,9 +34,9 @@ export default function Header() {
             </div>
             <Logo animation />
             <Link
-                href={'/feedback'}
+                href={FEEDBACK_PAGE}
                 className={
-                    router.asPath === '/feedback' ?
+                    router.asPath === FEEDBACK_PAGE ?
                         `${styles.header_link} ${styles.header_link_active}`
                         : styles.header_link
                 }

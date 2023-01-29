@@ -1,6 +1,7 @@
 import Logo from 'components/UI/icons/Logo'
 import RightArrow from 'components/UI/icons/RightArrow'
 import Link from 'next/link'
+import { FEEDBACK_PAGE } from 'utils'
 import styles from './Footer.module.scss'
 
 export default function Footer() {
@@ -20,7 +21,7 @@ export default function Footer() {
                     <Link href={'/feedback'}><p>Зворотній зв’язок</p></Link>
                 </div>
             </div>
-            <Link href={'/feedback'} className={styles.footer_link}>
+            <Link href={FEEDBACK_PAGE} className={styles.footer_link}>
                 <div className={styles.footer_link_title}>Зворотній зв’язок</div>
                 <div className={styles.footer_link_arrow}>
                     <RightArrow size={'8vw'} />

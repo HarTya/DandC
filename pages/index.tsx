@@ -7,7 +7,7 @@ import LeftArrow from 'components/UI/icons/LeftArrow'
 import RightArrow from 'components/UI/icons/RightArrow'
 import Card from 'components/UI/Card'
 import variables from 'styles/variables.module.scss'
-import { portfolioBackgroundBlocks, toolsWeUse, whatWeUseIcons } from 'utils'
+import { FEEDBACK_PAGE, portfolioBackgroundBlocks, PORTFOLIO_PAGE, toolsWeUse, whatWeUseIcons } from 'utils'
 import Link from 'next/link'
 
 const Home: NextPageWithLayout = () => {
@@ -16,17 +16,21 @@ const Home: NextPageWithLayout = () => {
             <Video />
             <div id='page-content'>
                 <div className={styles.home_previewScreen}>
-                    <Link href={'/portfolio'} className={styles.home_previewScreen_arrow}>
-                        <div className={styles.home_previewScreen_arrow_title}>Наші проекти</div>
-                        <LeftArrow size={'8vw'} />
+                    <Link href={PORTFOLIO_PAGE} className={styles.home_previewScreen_link}>
+                        <div className={styles.home_previewScreen_link_title}>Наші проекти</div>
+                        <div className={styles.home_previewScreen_link_arrow} id={'preview-screen-left-arrow'}>
+                            <LeftArrow size={'8vw'} />
+                        </div>
                     </Link>
                     <div className={styles.home_previewScreen_content}>
                         <div className={styles.home_previewScreen_content_title}>Казка про<br />майстерню магіі</div>
-                        <div className={styles.home_previewScreen_content_subtitle}>Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що с цього моменту вони напрямують свої сили на боротьбу з злими силами поганих сайтів</div>
+                        <div className={styles.home_previewScreen_content_subtitle}>Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що з цього моменту вони напрямують свої сили на боротьбу зі злими силами поганих сайтів</div>
                     </div>
-                    <Link href={'/feedback'} className={styles.home_previewScreen_arrow}>
-                        <div className={styles.home_previewScreen_arrow_title}>Зворотній зв’язок</div>
-                        <RightArrow size={'8vw'} />
+                    <Link href={FEEDBACK_PAGE} className={styles.home_previewScreen_link}>
+                        <div className={styles.home_previewScreen_link_title}>Зворотній зв’язок</div>
+                        <div className={styles.home_previewScreen_link_arrow} id={'preview-screen-right-arrow'}>
+                            <RightArrow size={'8vw'} />
+                        </div>
                     </Link>
                 </div>
                 <div className={styles.home_info}>
@@ -34,7 +38,7 @@ const Home: NextPageWithLayout = () => {
                     <div className={styles.home_info_row}>
                         <Card
                             title={'Що для нас\nважливо?'}
-                            text={'Для нас найважливіше це клієнти, ми прикладаємо всі можливі сили для того, щоб задовольнити запити та вибудувати довгострокові відносини.'}
+                            text={'Для нас найважливіше це клієнти, ми прикладаємо всі можливі сили для того, щоб задовільнити запити та побудувати довгострокові відносини.'}
                             color={variables.fifthColor}
                             height={'23vw'}
                         />
