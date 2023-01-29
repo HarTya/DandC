@@ -1,10 +1,14 @@
 import Logo from 'components/UI/icons/Logo'
 import RightArrow from 'components/UI/icons/RightArrow'
 import Link from 'next/link'
-import { FEEDBACK_PAGE } from 'utils'
+import { useRouter } from 'next/router'
+import { FEEDBACK_PAGE, PORTFOLIO_PAGE } from 'utils'
 import styles from './Footer.module.scss'
 
 export default function Footer() {
+
+    const router = useRouter()
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footer_info}>
@@ -15,10 +19,28 @@ export default function Footer() {
             <div className={styles.footer_links}>
                 <span>Сторінки</span>
                 <div>
-                    <Link href={'/portfolio'}><p>Портфоліо</p></Link>
+                    <Link href={PORTFOLIO_PAGE}>
+                        <p 
+                            id={
+                                router.asPath === PORTFOLIO_PAGE ? 'footer-link-active' 
+                                : 'footer-link-disable'
+                            }
+                        >
+                            Портфоліо
+                        </p>
+                    </Link>
                 </div>
                 <div>
-                    <Link href={'/feedback'}><p>Зворотній зв’язок</p></Link>
+                    <Link href={FEEDBACK_PAGE}>
+                        <p 
+                            id={
+                                router.asPath === FEEDBACK_PAGE ? 'footer-link-active' 
+                                : 'footer-link-disable'
+                            }
+                        >
+                            Зворотній зв’язок
+                        </p>    
+                    </Link>
                 </div>
             </div>
             <Link href={FEEDBACK_PAGE} className={styles.footer_link}>

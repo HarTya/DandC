@@ -37,17 +37,7 @@ body {
         overflow-y: auto!important;
     }
     &::-webkit-scrollbar {
-        width: 0.5vw;
-        &-track {
-            background-color: transparent;
-        }
-        &-thumb {
-            background: $scroll-color;
-            border-radius: 0.5vw;
-            &:hover {
-                background: $first-color;
-            }
-        }
+        display: none;
     }
     main {
         position: relative;
@@ -65,7 +55,7 @@ body {
             }
         }
         #page-content {
-            padding: 7vw 2vw 0 2vw;
+            padding: 4vw 2vw 0 2vw;
             overflow: hidden;
         }
     }

@@ -5,7 +5,7 @@
     min-height: 100vh;
     &_previewScreen {
         width: 100%;
-        height: calc(100vh - 7vw);
+        height: calc(41vw - 4vw);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -13,6 +13,7 @@
         &_link {
             &, & * {cursor: pointer}
             width: 33.33333%;
+            height: 100%;
             flex: 1 1 auto;
             opacity: 0.6;
             display: flex;
@@ -22,7 +23,7 @@
             transition: opacity 0.2s ease-in-out;
             &_title {
                 font-weight: 700;
-                font-size: 2vw;
+                font-size: $subheading-size;
             }
             &_arrow {
                 position: relative;
@@ -44,14 +45,14 @@
             &_title {
                 line-height: 1.2;
                 font-weight: 700;
-                font-size: 3vw;
+                font-size: calc($heading-size + 0.52083vw);
                 margin-bottom: 0.5em;
             }
             &_subtitle {
-                font-size: 1.5vw;
+                font-size: calc($text-size + 0.15625vw);
                 opacity: 0.9;
                 line-height: 1.4;
-                inline-size: 38vw;
+                inline-size: calc($text-size * 31);
                 overflow-wrap: break-word;
             }
         }
@@ -97,11 +98,9 @@
                     align-items: center;
                     &, & * {cursor: pointer}
                     svg {
-                        position: relative;
-                        top: 0;
-                        transition: top 0.2s ease-in-out;
+                        transition: transform 0.2s ease-in-out;
                         &:hover {
-                            top: -0.5vw;
+                            transform: scale(1.1);
                         }
                     }
                 }

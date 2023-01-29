@@ -19,7 +19,7 @@ const Home: NextPageWithLayout = () => {
                     <Link href={PORTFOLIO_PAGE} className={styles.home_previewScreen_link}>
                         <div className={styles.home_previewScreen_link_title}>Наші проекти</div>
                         <div className={styles.home_previewScreen_link_arrow} id={'preview-screen-left-arrow'}>
-                            <LeftArrow size={'8vw'} />
+                            <LeftArrow size={'5vw'} />
                         </div>
                     </Link>
                     <div className={styles.home_previewScreen_content}>
@@ -29,7 +29,7 @@ const Home: NextPageWithLayout = () => {
                     <Link href={FEEDBACK_PAGE} className={styles.home_previewScreen_link}>
                         <div className={styles.home_previewScreen_link_title}>Зворотній зв’язок</div>
                         <div className={styles.home_previewScreen_link_arrow} id={'preview-screen-right-arrow'}>
-                            <RightArrow size={'8vw'} />
+                            <RightArrow size={'5vw'} />
                         </div>
                     </Link>
                 </div>

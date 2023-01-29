@@ -21,7 +21,6 @@
         right: 0;
         bottom: 0;
         width: 100%;
-        min-height: 55px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,7 +30,7 @@
                 height: 100vh;
             }
             100% {
-                height: 5vw;
+                height: 4vw;
             }
         }
         &_content {
@@ -39,31 +38,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 55px;
             animation: LogoContent 4s ease-in-out forwards;
             @keyframes LogoContent {
                 0%, 20% {
-                    border: 0.6vw solid $second-color;
-                    width: 13.5vw;
-                    height: 5vw;
+                    border: 0.5vw solid $second-color;
+                    width: 11vw;
+                    height: 3.5vw;
                 }
                 30%, 40% {
-                    border: 0.6vw solid $second-color;
+                    border: 0.5vw solid $second-color;
                     background-color: $second-color;
-                    width: 13.5vw;
-                    height: 5vw;
+                    width: 11vw;
+                    height: 3.5vw;
                 }
                 50%, 80% {
-                    border: 0.6vw solid $second-color;
+                    border: 0.5vw solid $second-color;
                     background-color: $second-color;
                     width: 100vw;
-                    height: 5vw;
+                    height: 4vw;
                 }
                 100% {
-                    border: 0.6vw solid transparent;
+                    border: 0.5vw solid transparent;
                     background-color: transparent;
-                    width: 13.5vw;
-                    height: 5vw;
+                    width: 11vw;
+                    height: 4vw;
                 }
             }
         }
