@@ -23,15 +23,6 @@
     &_link {
         height: 100%;
         position: relative;
-        z-index: 101;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        font-size: $header-link-size;
-        font-weight: 500;
-        opacity: 0.7;
-        transition: opacity 0.4s ease-in-out;
         animation: Link 4s ease-in-out forwards;
         @keyframes Link {
             0%, 75% {
@@ -43,27 +34,59 @@
                 pointer-events: all;
             }
         }
-        &::after {
-            content: '';
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%);
-            opacity: 0;
-            width: 0;
-            height: 0.2em;
-            background-color: $first-color;
-            border-radius: 50%;
-            transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
-        }
-        &:hover {
+        &_subheading {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 101;
+            cursor: pointer;
+            font-size: $subheading-size;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: opacity 0.4s ease-in-out;
+            padding-right: 0.75vw;
             &::after {
-                opacity: 1;
-                width: 0.2em;
+                cursor: pointer;
+                content: '';
+                opacity: 0;
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: 10%;
+                right: 0;
+                border-bottom: 0.1575vw solid $first-color;
+                border-right: 0.1575vw solid $first-color;
+                transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out;
             }
-        }
-        &_active {
-            opacity: 1;
+            &:hover {
+                &::after {
+                    opacity: 0.5;
+                    width: 1.25vw;
+                    height: 0.75vw;
+                }
+            }
+            &[id='header-link-active'] {
+                opacity: 1;
+                &::after {
+                    opacity: 0.75;
+                    width: 1.25vw;
+                    height: 0.75vw;
+                }
+                animation: HeaderLinkActive 0.3s ease-in-out forwards;
+                @keyframes HeaderLinkActive {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(5%);
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+            }
         }
     }
     animation: Header 4s ease-in-out forwards;

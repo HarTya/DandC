@@ -1,8 +1,8 @@
-import Logo from 'components/UI/icons/Logo'
+import Logo from 'components/UI/Logo'
 import RightArrow from 'components/UI/icons/RightArrow'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { FEEDBACK_PAGE, PORTFOLIO_PAGE } from 'utils'
+import { FEEDBACK_PAGE, PORTFOLIO_PAGE } from 'state'
 import styles from './Footer.module.scss'
 
 export default function Footer() {

@@ -7,8 +7,9 @@ import LeftArrow from 'components/UI/icons/LeftArrow'
 import RightArrow from 'components/UI/icons/RightArrow'
 import Card from 'components/UI/Card'
 import variables from 'styles/variables.module.scss'
-import { FEEDBACK_PAGE, portfolioBackgroundBlocks, PORTFOLIO_PAGE, toolsWeUse, whatWeUseIcons } from 'utils'
+import { FEEDBACK_PAGE, guideline, portfolioBackgroundBlocks, PORTFOLIO_PAGE, previewScreen, toolsWeUse, whatWeUse } from 'state'
 import Link from 'next/link'
+import GuidelineLine from 'components/UI/icons/GuidelineLine'
 
 const Home: NextPageWithLayout = () => {
     return (
@@ -17,82 +18,109 @@ const Home: NextPageWithLayout = () => {
             <div id='page-content'>
                 <div className={styles.home_previewScreen}>
                     <Link href={PORTFOLIO_PAGE} className={styles.home_previewScreen_link}>
-                        <div className={styles.home_previewScreen_link_title}>Наші проекти</div>
+                        <div className={styles.home_previewScreen_link_subheading}>{previewScreen.subheadingLeft}</div>
                         <div className={styles.home_previewScreen_link_arrow} id={'preview-screen-left-arrow'}>
-                            <LeftArrow size={'5vw'} />
+                            <LeftArrow size={'4vw'} />
                         </div>
                     </Link>
                     <div className={styles.home_previewScreen_content}>
-                        <div className={styles.home_previewScreen_content_title}>Казка про<br />майстерню магіі</div>
-                        <div className={styles.home_previewScreen_content_subtitle}>Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що з цього моменту вони напрямують свої сили на боротьбу зі злими силами поганих сайтів</div>
+                        <pre className={styles.home_previewScreen_content_heading}>{previewScreen.heading}</pre>
+                        <pre className={styles.home_previewScreen_content_text}>{previewScreen.text}</pre>
                     </div>
                     <Link href={FEEDBACK_PAGE} className={styles.home_previewScreen_link}>
-                        <div className={styles.home_previewScreen_link_title}>Зворотній зв’язок</div>
+                        <div className={styles.home_previewScreen_link_subheading}>{previewScreen.subheadingRight}</div>
                         <div className={styles.home_previewScreen_link_arrow} id={'preview-screen-right-arrow'}>
-                            <RightArrow size={'5vw'} />
+                            <RightArrow size={'4vw'} />
                         </div>
                     </Link>
                 </div>
                 <div className={styles.home_info}>
                     <div className={styles.home_info_background} />
-                    <div className={styles.home_info_row}>
-                        <Card
-                            title={'Що для нас\nважливо?'}
-                            text={'Для нас найважливіше це клієнти, ми прикладаємо всі можливі сили для того, щоб задовільнити запити та побудувати довгострокові відносини.'}
-                            color={variables.fifthColor}
-                            height={'23vw'}
-                        />
-                        <Card
-                            title={`Яка наша\nмета?`}
-                            text={'Наша мета полягає в тому, щоб доставляти нашим клієнтам якісний продукт вчасно, ми завжди ретельно ставимося до кожного проекту.'}
-                            color={variables.secondColor}
-                            height={'23vw'}
-                        />
-                        <Card
-                            title={'Яка наша\nкоманда?'}
-                            text={'Наші співробітники є професіоналами своєї справи, ми завжди сприяємо розвитку наших співробітників та заохочуємо їх за це.'}
-                            color={variables.fourthColor}
-                            height={'23vw'}
-                        />
+                    <div className={styles.home_info_guideline}>
+                        <div className={styles.home_info_guideline_line}>
+                            <GuidelineLine />
+                        </div>
+                        {guideline.map(({
+                            id, 
+                            Icon, 
+                            IconWidth, 
+                            IconHeight, 
+                            subheading,
+                            text
+                        }) => 
+                            <div className={styles.home_info_guideline_step} key={id}>
+                                <div id={'guideline-icon'}>
+                                    <Icon 
+                                        width={IconWidth} 
+                                        height={IconHeight} 
+                                    />
+                                </div>
+                                <pre className={styles.home_info_guideline_subheading}>{subheading}</pre>
+                                <pre className={styles.home_info_guideline_text}>{text}</pre>
+                            </div>
+                        )}
                     </div>
                     <div className={styles.home_info_row}>
-                        <Card
+                        {/* <Card
                             title={'Що вміє наша\nкоманда?'}
                             text={
-                                toolsWeUse.map(({ id, name, Icon }) =>
+                                whatWeUse.map(({
+                                    id,
+                                    name,
+                                    Icon,
+                                    size
+                                }) =>
                                     <span key={id}>
-                                        <Icon />
+                                        <Icon 
+                                            size={size} 
+                                        />
                                         <p>{name}</p>
                                     </span>
                                 )
                             }
                             color={variables.sixthColor}
                             bigSize
-                        />
-                        <div className={styles.home_info_whatWeUse}>
-                            <div className={styles.home_info_whatWeUse_text}>Що ми<br />використовуємо:</div>
-                            <div className={styles.home_info_whatWeUse_icons}>
-                                {whatWeUseIcons.map(({ id, url, Icon }) =>
-                                    <Link href={url} target={'_blank'} key={id}>
-                                        <Icon />
+                        /> */}
+                        <div className={styles.home_info_toolsWeUse}>
+                            <div className={styles.home_info_toolsWeUse_text}>Що ми<br />використовуємо:</div>
+                            <div className={styles.home_info_toolsWeUse_icons}>
+                                {toolsWeUse.map(({
+                                    id,
+                                    url,
+                                    Icon,
+                                    IconWidth,
+                                    IconHeight
+                                }) =>
+                                    <Link 
+                                        href={url} 
+                                        target={'_blank'} 
+                                        key={id}
+                                    >
+                                        <Icon 
+                                            width={IconWidth} 
+                                            height={IconHeight} 
+                                        />
                                     </Link>
                                 )}
                             </div>
                         </div>
                     </div>
-                    <Card
+                    {/* <Card
                         caption={'Зроблено командою D&C Ready\n14.09.2022'}
                         title={'REIBIKE\nBest for bravest'}
                         text={'Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що с цього моменту вони напрямують свої сили на боротьбу з злими силами поганих сайтів'}
                         color={variables.secondColor}
                         wideBorder
-                    />
+                    /> */}
                 </div>
                 <div className={styles.home_portfolioScreen}>
                     <div className={styles.home_portfolioScreen_background}>
                         {portfolioBackgroundBlocks.map(id =>
                             <div key={id}>
-                                <span id={`${id}`} className={styles.home_portfolioScreen_background_block} />
+                                <span 
+                                    id={`${id}`} 
+                                    className={styles.home_portfolioScreen_background_block} 
+                                />
                             </div>
                         )}
                     </div>
