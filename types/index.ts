@@ -9,12 +9,6 @@ export interface LayoutProps {
     }
 }
 
-export interface LogoProps {
-    width?: string,
-    height?: string,
-    animation: boolean
-}
-
 export interface CardProps {
     caption?: string,
     title: string,
@@ -23,6 +17,12 @@ export interface CardProps {
     bigSize?: boolean,
     wideBorder?: boolean,
     height?: string | boolean
+}
+
+export interface LogoProps {
+    width?: string,
+    height?: string,
+    animation: boolean
 }
 
 export interface GuidelineIconsProps {
