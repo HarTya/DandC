@@ -128,9 +128,9 @@
                     z-index: 1;
                     top: 0;
                     left: 0;
-                    opacity: 0.5;
+                    opacity: 1;
                     border-radius: 50%;
-                    filter: blur(100px);
+                    filter: blur(1vw);
                     background-color: transparent;
                     transition: background-color 0.2s ease-in-out;
                 }
