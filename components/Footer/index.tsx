@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.footer_info}>
-                <Logo />
+                <Logo animation={false} />
                 <p>+380 8 800 555 3535<br />support.dcready@gmail.com</p>
                 <p>2022 D&C Ready. All rights reserved</p>
             </div>

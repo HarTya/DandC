@@ -10,8 +10,8 @@ export interface LayoutProps {
 }
 
 export interface LogoProps {
-    width: string,
-    height: string,
+    width?: string,
+    height?: string,
     animation: boolean
 }
 
