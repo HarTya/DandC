@@ -18,7 +18,7 @@ import Idea from 'components/UI/icons/Idea'
 import Settings from 'components/UI/icons/Settings'
 import UploadCloud from 'components/UI/icons/UploadCloud'
 import Logo from 'components/UI/Logo'
-import GuidelineLine from 'components/UI/icons/GuidelineLine'
+import Bot from 'components/UI/icons/Bot'
 
 export const HOME_PAGE = '/'
 export const PORTFOLIO_PAGE = '/portfolio'
@@ -68,34 +68,42 @@ export const guideline = [
     }
 ]
 
-export const whatWeUse = [
+export const skillsHeading = 'Що вміє\nнаша команда?'
+export const skills = [
     {
         id: 1,
-        name: 'UI/UX Design',
+        text: 'UI/UX Design',
         Icon: Monitor,
-        size: '1.5vw'
+        IconSize: '1.5vw'
     },
     {
         id: 2,
-        name: 'Graphic Design',
+        text: 'Graphic Design',
         Icon: Pen,
-        size: '1.5vw'
+        IconSize: '1.5vw'
     },
     {
         id: 3,
-        name: 'Front-End Development',
+        text: 'Front-End Development',
         Icon: FrontEnd,
-        size: '1.5vw'
+        IconSize: '1.5vw'
     },
     {
         id: 4,
-        name: 'Back-End Development',
+        text: 'Back-End Development',
         Icon: BackEnd,
-        size: '1.5vw'
+        IconSize: '1.5vw'
+    },
+    {
+        id: 5,
+        text: 'Telegram Bot Development',
+        Icon: Bot,
+        IconSize: '1.5vw'
     }
 ]
 
-export const toolsWeUse = [
+export const toolsHeading = 'Що ми\nвикористовуємо:'
+export const tools = [
     {
         id: 1,
         url: 'https://www.atlassian.com/software/jira',
@@ -105,72 +113,72 @@ export const toolsWeUse = [
     },
     {
         id: 2,
-        url: 'https://nodejs.org/en/',
-        Icon: NodeJS,
-        IconWidth: '5vw',
-        IconHeight: '4vw'
-    },
-    {
-        id: 3,
-        url: 'https://github.com/',
-        Icon: GitHub,
-        IconWidth: '4vw',
-        IconHeight: '4vw'
-    },
-    {
-        id: 4,
-        url: 'https://www.jetbrains.com/webstorm/',
-        Icon: WebStorm,
-        IconWidth: '3.5vw',
-        IconHeight: '4vw'
-    },
-    {
-        id: 5,
         url: 'https://www.figma.com/',
         Icon: Figma,
         IconWidth: '3.5vw',
         IconHeight: '3.5vw'
     },
     {
-        id: 6,
+        id: 3,
         url: 'https://www.sketch.com/',
         Icon: Sketch,
         IconWidth: '6.5vw',
         IconHeight: '4vw'
     },
     {
-        id: 7,
-        url: 'https://www.typescriptlang.org/',
-        Icon: TypeScript,
-        IconWidth: '7vw',
-        IconHeight: '4vw'
-    },
-    {
-        id: 8,
-        url: 'https://reactjs.org/',
-        Icon: React,
-        IconWidth: '7vw',
-        IconHeight: '4vw'
-    },
-    {
-        id: 9,
+        id: 4,
         url: 'https://www.adobe.com/products/illustrator.html',
         Icon: Illustrator,
         IconWidth: '6.5vw',
         IconHeight: '4vw'
     },
     {
-        id: 10,
+        id: 5,
         url: 'https://www.adobe.com/products/photoshop.html',
         Icon: Photoshop,
         IconWidth: '6.5vw',
         IconHeight: '4vw'
     },
     {
-        id: 11,
+        id: 6,
+        url: 'https://www.jetbrains.com/webstorm/',
+        Icon: WebStorm,
+        IconWidth: '3.5vw',
+        IconHeight: '4vw'
+    },
+    {
+        id: 7,
+        url: 'https://github.com/',
+        Icon: GitHub,
+        IconWidth: '4vw',
+        IconHeight: '4vw'
+    },
+    {
+        id: 8,
+        url: 'https://www.typescriptlang.org/',
+        Icon: TypeScript,
+        IconWidth: '7vw',
+        IconHeight: '4vw'
+    },
+    {
+        id: 9,
+        url: 'https://reactjs.org/',
+        Icon: React,
+        IconWidth: '7vw',
+        IconHeight: '4vw'
+    },
+    {
+        id: 10,
         url: 'https://nextjs.org/',
         Icon: NextJS,
         IconWidth: '3.25vw',
+        IconHeight: '4vw'
+    },
+    {
+        id: 11,
+        url: 'https://nodejs.org/en/',
+        Icon: NodeJS,
+        IconWidth: '5vw',
         IconHeight: '4vw'
     },
     {

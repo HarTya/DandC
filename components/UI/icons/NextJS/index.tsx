@@ -1,8 +1,8 @@
-import { ToolsWeUseIconsProps } from 'types'
+import { ToolsIconsProps } from 'types'
 
 export default function NextJS({
     width, height
-}: ToolsWeUseIconsProps) {
+}: ToolsIconsProps) {
     return (
         <svg
             width={width}

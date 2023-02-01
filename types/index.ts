@@ -34,11 +34,11 @@ export interface ArrowIconsProps {
     size: string
 }
 
-export interface WhatWeUseIconsProps {
+export interface SkillsIconsProps {
     size: string
 }
 
-export interface ToolsWeUseIconsProps {
+export interface ToolsIconsProps {
     width: string,
     height: string
 }

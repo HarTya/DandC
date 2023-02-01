@@ -5,9 +5,7 @@ import styles from 'styles/Home.module.scss'
 import Video from 'components/UI/Video'
 import LeftArrow from 'components/UI/icons/LeftArrow'
 import RightArrow from 'components/UI/icons/RightArrow'
-import Card from 'components/UI/Card'
-import variables from 'styles/variables.module.scss'
-import { FEEDBACK_PAGE, guideline, portfolioBackgroundBlocks, PORTFOLIO_PAGE, previewScreen, toolsWeUse, whatWeUse } from 'state'
+import { FEEDBACK_PAGE, guideline, portfolioBackgroundBlocks, PORTFOLIO_PAGE, previewScreen, skills, skillsHeading, tools, toolsHeading } from 'state'
 import Link from 'next/link'
 import GuidelineLine from 'components/UI/icons/GuidelineLine'
 
@@ -55,36 +53,32 @@ const Home: NextPageWithLayout = () => {
                                         height={IconHeight} 
                                     />
                                 </div>
-                                <pre className={styles.home_info_guideline_subheading}>{subheading}</pre>
-                                <pre className={styles.home_info_guideline_text}>{text}</pre>
+                                <pre className={styles.home_info_guideline_step_subheading}>{subheading}</pre>
+                                <pre className={styles.home_info_guideline_step_text}>{text}</pre>
                             </div>
                         )}
                     </div>
-                    <div className={styles.home_info_row}>
-                        {/* <Card
-                            title={'Що вміє наша\nкоманда?'}
-                            text={
-                                whatWeUse.map(({
-                                    id,
-                                    name,
-                                    Icon,
-                                    size
-                                }) =>
-                                    <span key={id}>
-                                        <Icon 
-                                            size={size} 
-                                        />
-                                        <p>{name}</p>
-                                    </span>
-                                )
-                            }
-                            color={variables.sixthColor}
-                            bigSize
-                        /> */}
-                        <div className={styles.home_info_toolsWeUse}>
-                            <div className={styles.home_info_toolsWeUse_text}>Що ми<br />використовуємо:</div>
-                            <div className={styles.home_info_toolsWeUse_icons}>
-                                {toolsWeUse.map(({
+                    <div className={styles.home_info_weUse}>
+                        <div className={styles.home_info_weUse_skills}>
+                            <pre className={styles.home_info_weUse_skills_heading}>{skillsHeading}</pre>
+                            <div className={styles.home_info_weUse_skills_list}>
+                                {skills.map(({
+                                   id,
+                                   text,
+                                   Icon,
+                                   IconSize
+                                }) => 
+                                    <div className={styles.home_info_weUse_skills_list_item} key={id}>
+                                        <Icon size={IconSize} />
+                                        <div className={styles.home_info_weUse_skills_list_item_text}>{text}</div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <div className={styles.home_info_weUse_tools}>
+                            <pre className={styles.home_info_weUse_tools_heading}>{toolsHeading}</pre>
+                            <div className={styles.home_info_weUse_tools_icons}>
+                                {tools.map(({
                                     id,
                                     url,
                                     Icon,

@@ -1,8 +1,8 @@
-import { WhatWeUseIconsProps } from 'types'
+import { SkillsIconsProps } from 'types'
 
 export default function BackEnd({
     size
-}: WhatWeUseIconsProps) {
+}: SkillsIconsProps) {
     return (
         <svg
             width={size}

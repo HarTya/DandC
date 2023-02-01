@@ -1,8 +1,8 @@
-import { ToolsWeUseIconsProps } from 'types'
+import { ToolsIconsProps } from 'types'
 
 export default function TypeScript({
     width, height
-}: ToolsWeUseIconsProps) {
+}: ToolsIconsProps) {
     return (
         <svg
             width={width}
