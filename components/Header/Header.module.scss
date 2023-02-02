@@ -56,14 +56,14 @@
                 position: absolute;
                 bottom: 10%;
                 right: 0;
-                border-bottom: 0.1575vw solid $first-color;
-                border-right: 0.1575vw solid $first-color;
+                border-bottom: 0.15vw solid $first-color;
+                border-right: 0.15vw solid $first-color;
                 transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out;
             }
             &:hover {
                 &::after {
                     opacity: 0.5;
-                    width: 1.25vw;
+                    width: 1vw;
                     height: 0.75vw;
                 }
             }
@@ -96,7 +96,7 @@
         }
         100% {
             background-color: $header-bg-color;
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(0.5vw);
         }
     }
 }

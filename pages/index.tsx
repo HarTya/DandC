@@ -5,9 +5,9 @@ import styles from 'styles/Home.module.scss'
 import Video from 'components/UI/Video'
 import LeftArrow from 'components/UI/icons/LeftArrow'
 import RightArrow from 'components/UI/icons/RightArrow'
-import { FEEDBACK_PAGE, guideline, portfolioBackgroundBlocks, PORTFOLIO_PAGE, previewScreen, skills, skillsHeading, tools, toolsHeading } from 'state'
+import { FEEDBACK_PAGE, way, portfolioBackgroundBlocks, PORTFOLIO_PAGE, previewScreen, questions, skills, skillsHeading, tools, toolsHeading } from 'state'
 import Link from 'next/link'
-import GuidelineLine from 'components/UI/icons/GuidelineLine'
+import WayLine from 'components/UI/icons/WayLine'
 
 const Home: NextPageWithLayout = () => {
     return (
@@ -34,27 +34,23 @@ const Home: NextPageWithLayout = () => {
                 </div>
                 <div className={styles.home_info}>
                     <div className={styles.home_info_background} />
-                    <div className={styles.home_info_guideline}>
-                        <div className={styles.home_info_guideline_line}>
-                            <GuidelineLine />
+                    <div className={styles.home_info_way}>
+                        <div className={styles.home_info_way_background}>
+                            <WayLine />
                         </div>
-                        {guideline.map(({
-                            id, 
-                            Icon, 
-                            IconWidth, 
-                            IconHeight, 
+                        {way.map(({
+                            id,
+                            Icon,
+                            IconSize,
                             subheading,
                             text
-                        }) => 
-                            <div className={styles.home_info_guideline_step} key={id}>
-                                <div id={'guideline-icon'}>
-                                    <Icon 
-                                        width={IconWidth} 
-                                        height={IconHeight} 
-                                    />
+                        }) =>
+                            <div className={styles.home_info_way_step} key={id}>
+                                <div id={'way-icon'}>
+                                    <Icon size={IconSize} />
                                 </div>
-                                <pre className={styles.home_info_guideline_step_subheading}>{subheading}</pre>
-                                <pre className={styles.home_info_guideline_step_text}>{text}</pre>
+                                <pre className={styles.home_info_way_step_subheading}>{subheading}</pre>
+                                <pre className={styles.home_info_way_step_text}>{text}</pre>
                             </div>
                         )}
                     </div>
@@ -63,11 +59,11 @@ const Home: NextPageWithLayout = () => {
                             <pre className={styles.home_info_weUse_skills_heading}>{skillsHeading}</pre>
                             <div className={styles.home_info_weUse_skills_list}>
                                 {skills.map(({
-                                   id,
-                                   text,
-                                   Icon,
-                                   IconSize
-                                }) => 
+                                    id,
+                                    text,
+                                    Icon,
+                                    IconSize
+                                }) =>
                                     <div className={styles.home_info_weUse_skills_list_item} key={id}>
                                         <Icon size={IconSize} />
                                         <div className={styles.home_info_weUse_skills_list_item_text}>{text}</div>
@@ -85,35 +81,45 @@ const Home: NextPageWithLayout = () => {
                                     IconWidth,
                                     IconHeight
                                 }) =>
-                                    <Link 
-                                        href={url} 
-                                        target={'_blank'} 
+                                    <Link
+                                        href={url}
+                                        target={'_blank'}
                                         key={id}
                                     >
-                                        <Icon 
-                                            width={IconWidth} 
-                                            height={IconHeight} 
+                                        <Icon
+                                            width={IconWidth}
+                                            height={IconHeight}
                                         />
                                     </Link>
                                 )}
                             </div>
                         </div>
                     </div>
-                    {/* <Card
-                        caption={'Зроблено командою D&C Ready\n14.09.2022'}
-                        title={'REIBIKE\nBest for bravest'}
-                        text={'Зібрались якось надзвичайний дізайнер й талановитий кодер та вирішили вони що с цього моменту вони напрямують свої сили на боротьбу з злими силами поганих сайтів'}
-                        color={variables.secondColor}
-                        wideBorder
-                    /> */}
+                    <div className={styles.home_info_questions}>
+                        {questions.map(({
+                            id,
+                            Icon,
+                            IconSize,
+                            subheading,
+                            text
+                        }) =>
+                            <div className={styles.home_info_questions_question} key={id}>
+                                <div id={'question-icon'}>
+                                    <Icon size={IconSize} />
+                                </div>
+                                <div className={styles.home_info_questions_question_subheading}>{subheading}</div>
+                                <pre className={styles.home_info_questions_question_text}>{text}</pre>
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <div className={styles.home_portfolioScreen}>
                     <div className={styles.home_portfolioScreen_background}>
                         {portfolioBackgroundBlocks.map(id =>
                             <div key={id}>
-                                <span 
-                                    id={`${id}`} 
-                                    className={styles.home_portfolioScreen_background_block} 
+                                <span
+                                    id={`${id}`}
+                                    className={styles.home_portfolioScreen_background_block}
                                 />
                             </div>
                         )}

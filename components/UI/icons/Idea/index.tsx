@@ -1,12 +1,12 @@
-import { GuidelineIconsProps } from 'types'
+import { WayIconsProps } from 'types'
 
 export default function Idea({
-    width, height
-}: GuidelineIconsProps) {
+    size
+}: WayIconsProps) {
     return (
         <svg
-            width={width}
-            height={height}
+            width={size}
+            height={size}
             viewBox='0 0 86 106'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'

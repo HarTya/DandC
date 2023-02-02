@@ -9,25 +9,14 @@ export interface LayoutProps {
     }
 }
 
-export interface CardProps {
-    caption?: string,
-    title: string,
-    text: string | Array<ReactElement>,
-    color: string,
-    bigSize?: boolean,
-    wideBorder?: boolean,
-    height?: string | boolean
-}
-
 export interface LogoProps {
     width?: string,
     height?: string,
     animation: boolean
 }
 
-export interface GuidelineIconsProps {
-    width: string,
-    height: string
+export interface WayIconsProps {
+    size: string
 }
 
 export interface ArrowIconsProps {
@@ -41,4 +30,8 @@ export interface SkillsIconsProps {
 export interface ToolsIconsProps {
     width: string,
     height: string
+}
+
+export interface QuestionsIconsProps {
+    size: string
 }
